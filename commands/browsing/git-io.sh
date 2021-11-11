@@ -3,7 +3,7 @@
 # Required parameters:
 # @raycast.schemaVersion 1
 # @raycast.title git.io
-# @raycast.mode inline
+# @raycast.mode silent
 # @raycast.packageName Browsing
 
 # Optional parameters:
@@ -14,7 +14,7 @@
 # @raycast.authorURL https://github.com/astrit
 # @raycast.description Shorten any github.com URL
 
-regex='(https?)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
+regex='(https?)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]?(github)\.(com|io)'
 getLink=$(pbpaste)
 
 if [[ $getLink =~ $regex ]]
